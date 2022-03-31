@@ -6,6 +6,7 @@
 body {
     background-color: #090b1a;
     overflow: hidden;
+    font-family: 'Inter', sans-serif;
 }
 
 .container {
@@ -15,56 +16,80 @@ body {
     align-items: center;
 }
 
-.card {
-    width: 700px;
-    height: 500px;
-    background-color: #1b1938;
-}
-
-#rgbOverlay {
-    position: absolute;
-    width: 250px;
-    height: 180px;
-    background-color: #aa5cdb;
-    opacity: 20%;
-}
-
-#overlay {
-    width: auto;
-    height: 180px;
-    background-color: #aa5cdb;
-    background-image: url("images/image-header-mobile.jpg");
-    background-blend-mode: multiply;
-    background-size: 100%;
-}
-
-/* Mobile Settings */
+/* Mobile settings */
 @media only screen and (max-width: 425px) {
 
     .card {
-        width: 250px;
+        width: 240px;
         height: 90vh;
         background-color: #1b1938;
     }
 
     .header {
-        width: 250px;
+        width: 240px;
         border-radius: 3% 3% 0 0;
     }
 
+    #rgbOverlay {
+        position: absolute;
+        width: 240px;
+        height: 175px;
+        background-color: #aa5cdb;
+        opacity: 25%;
+    }
+
+    #overlay {
+        width: 240px;
+        height: 175px;
+        background-color: #aa5cdb;
+        background-image: url("images/image-header-mobile.jpg");
+        background-blend-mode: multiply;
+        background-size: 100%;
+    }
+
+    #txtMargin {
+        margin: 25px;
+    }
+
+    #txtMargin span {
+        color: #aa5cdb;
+    }
+
+    .fontEdit {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fontEdit h1 {
+        text-align: center;
+        letter-spacing: -0.5px;
+        font-size: 20px;
+        color: white;
+    }
+
+    .fontEdit p {
+        text-align: center;
+        font-size: 10px;
+        color: white;
+    }
+
+
 }
 
-/* Tablet Settings */
+/* Tablet settings */
 @media only screen and (min-width: 768px) {
 
     .card {
         width: 100px;
         height: 90vh;
         background-color: #1b1938;
+        justify-content: center;
+        align-items: center;
     }
 
 }
 
+/* Desktop settings */
 @media only screen and (min-width: 1024px) {
 
     .card {
