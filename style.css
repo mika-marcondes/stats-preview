@@ -21,22 +21,54 @@ body {
     background-color: #1b1938;
 }
 
+#rgbOverlay {
+    position: absolute;
+    width: 250px;
+    height: 180px;
+    background-color: #aa5cdb;
+    opacity: 20%;
+}
+
+#overlay {
+    width: auto;
+    height: 180px;
+    background-color: #aa5cdb;
+    background-image: url("images/image-header-mobile.jpg");
+    background-blend-mode: multiply;
+    background-size: 100%;
+}
+
 /* Mobile Settings */
 @media only screen and (max-width: 425px) {
 
     .card {
-        width: 85vw;
+        width: 250px;
+        height: 90vh;
+        background-color: #1b1938;
+    }
+
+    .header {
+        width: 250px;
+        border-radius: 3% 3% 0 0;
+    }
+
+}
+
+/* Tablet Settings */
+@media only screen and (min-width: 768px) {
+
+    .card {
+        width: 100px;
         height: 90vh;
         background-color: #1b1938;
     }
 
 }
 
-/* Tablet Settings */
-@media only screen and (min-width: 426px) and (max-width: 768px){
+@media only screen and (min-width: 1024px) {
 
     .card {
-        width: 100px;
+        width: 500px;
         height: 90vh;
         background-color: #1b1938;
     }
