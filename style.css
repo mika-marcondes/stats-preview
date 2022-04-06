@@ -9,123 +9,149 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-.container {
-    display: flex;
-    height: 97vh;
-    justify-content: center;
-    align-items: center;
-}
 
 /* Mobile settings */
-@media only screen and (max-width: 425px) {
-
-    .card {
-        width: 75vw;
-        height: auto;
-        border-radius: 2%;
-        background-color: #1b1938;
-    }
-
-    .header {
-        width: 240px;
-        border-radius: 3% 3% 0 0;
-    }
-
-    #rgbOverlay {
-        position: absolute;
-        width: 75vw;
-        height: 175px;
-        background-color: #aa5cdb;
-        opacity: 25%;
-    }
-
-    #overlay {
-        width: 75vw;
-        height: 175px;
-        background-color: #aa5cdb;
-        background-image: url("images/image-header-mobile.jpg");
-        background-repeat: no-repeat;
-        background-blend-mode: multiply;
-        background-size: 100%;
-    }
-
-    #txtMargin {
-        margin: 25px;
-    }
-
-    #txtMargin span {
-        color: #aa5cdb;
-    }
-
-    .fontEdit {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .fontEdit h1 {
-        margin-bottom: 10px;
-        text-align: center;
-        font-size: 20px;
-        color: white;
-    }
-
-    .fontEdit h2 {
-        margin-top: 12px;
-        text-align: center;
-        font-size: 18px;
-        color: white;
-    }
-
-    .fontEdit p {
-        margin: 2px 0;
-        text-align: center;
-        letter-spacing: 2px;
-        word-spacing: 2px;
-        line-height: 15px;
-        font-size: 8px;
-        color: hsla(0, 0%, 100%, 0.75)
-    }
-
-    #pEdit {
-        margin-bottom: 10px;
-        letter-spacing: 0;
-        font-size: 10px;
-    }
-
-    .attribution {
-        display: flex;
-        justify-content: center;
-        font-size: 8px;
-        color: white;
-    }
-
-    .attribution a {
-        color: #aa5cdb;
-    }
-
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
 }
 
-/* Tablet settings */
-@media only screen and (min-width: 768px) {
+.card {
+    width: 75vw;
+    height: auto;
+    border-radius: 1vh;
+    background-color: #1b1938;
+}
 
-    .card {
-        width: 100px;
-        height: 90vh;
-        background-color: #1b1938;
-        justify-content: center;
-        align-items: center;
-    }
+.colorCorrection {
+    position: absolute;
+    width: 75vw;
+    height: 175px;
+    background-color: #aa5cdb;
+    opacity: 25%;
+}
 
+.bgImg {
+    width: 75vw;
+    height: 175px;
+    border-radius: 1vh 1vh 0 0;
+    background-color: #aa5cdb;
+    background-image: url("images/image-header-mobile.jpg");
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+.fontEdit span {
+    color: #aa5cdb;
+}
+
+.fontEdit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fontEdit h1 {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.fontEdit p {
+    margin: 4vw 0 8vw 0;
+    text-align: center;
+    line-height: 2.5vh;
+    font-size: 10px;
+    color: hsla(0, 0%, 100%, 0.75)
+}
+
+.statsEdit {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.statsEdit h2 {
+    margin-bottom: 1vw;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+.statsEdit p {
+    margin-bottom: 8vw;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 8px;
+    color: hsla(0, 0%, 100%, 0.75)
+}
+
+.attribution {
+    display: flex;
+    justify-content: center;
+    font-size: 8px;
+    color: white;
+}
+
+.attribution a {
+    color: #aa5cdb;
 }
 
 /* Desktop settings */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
+
+    .container {
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .colorCorrection {
+        width: 40vw;
+        height: 50vh;
+    }
+
+    .bgImg {
+        width: 40vw;
+        height: 50vh;
+        border-radius: 0 1vh 1vh 0;
+        background-size: cover;
+    }
 
     .card {
-        width: 500px;
-        height: 90vh;
+        width: 40vw;
+        height: 50vh;
+        border-radius: 1vh 0 0 1vh;
         background-color: #1b1938;
+    }
+
+    .fontEdit h1 {
+        text-align: left;
+        font-size: 34px;
+    }
+
+    .fontEdit p {
+        text-align: left;
+        margin: 2vw 0 4vw 0;
+        font-size: 16px;
+        color: hsla(0, 0%, 100%, 0.75)
+    }
+
+    .statsEdit {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .statsEdit h2 {
+        text-align: left;
+        font-size: 24px;
+    }
+
+    .statsEdit p {
+        margin-bottom: 0;
+        font-size: 12px;
     }
 
 }
