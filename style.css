@@ -9,7 +9,6 @@ body {
     overflow: hidden;
 }
 
-
 /* Mobile settings */
 .container {
     display: flex;
@@ -20,23 +19,24 @@ body {
 }
 
 .card {
-    width: 75vw;
-    height: fit-content;
+    display: flex;
+    width: 80vw;
+    height: auto;
     border-radius: 0 0 1vh 1vh;
     background-color: #1b1938;
 }
 
 .colorCorrection {
     position: absolute;
-    width: 75vw;
-    height: 175px;
+    width: 80vw;
+    height: 25vh;
     background-color: #aa5cdb;
     opacity: 25%;
 }
 
 .bgImg {
-    width: 75vw;
-    height: 175px;
+    width: 80vw;
+    height: 25vh;
     border-radius: 1vh 1vh 0 0;
     background-color: #aa5cdb;
     background-image: url("images/image-header-mobile.jpg");
@@ -53,21 +53,21 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 6vw 10vw;
+    margin: 3vh 3vh;
 }
 
 .fontEdit h1 {
-    margin: 8px 0;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
+    margin-bottom: 2vh;
 }
 
 .fontEdit p {
     text-align: center;
-    line-height: 2.5vh;
-    font-size: 10px;
-    color: hsla(0, 0%, 100%, 0.75)
+    line-height: 150%;
+    font-size: 12px;
+    color: hsla(0, 0%, 100%, 0.75);
 }
 
 .statsEdit {
@@ -77,14 +77,13 @@ body {
 }
 
 .statsEdit h2 {
-    margin-bottom: 1vw;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     color: white;
+    margin-top: 4vh;
 }
 
 .statsEdit p {
-    margin-bottom: 8vw;
     font-family: 'Lexend Deca', sans-serif;
     font-size: 8px;
     color: hsla(0, 0%, 100%, 0.75)
@@ -101,8 +100,8 @@ body {
     color: #aa5cdb;
 }
 
-/* Desktop settings */
-@media only screen and (min-width: 768px) {
+/* Tablet settings */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
 
     .container {
         flex-direction: row-reverse;
@@ -111,33 +110,98 @@ body {
 
     .colorCorrection {
         width: 40vw;
-        height: 50vh;
+        height: 60vh;
     }
 
     .bgImg {
         width: 40vw;
-        height: 50vh;
+        height: 60vh;
         border-radius: 0 1vh 1vh 0;
         background-size: cover;
     }
 
     .card {
+        display: flex;
         width: 40vw;
-        height: 50vh;
+        height: 60vh;
         border-radius: 1vh 0 0 1vh;
         background-color: #1b1938;
     }
 
+    .fontEdit {
+        margin: 5vw 5vw;
+    }
+
     .fontEdit h1 {
+        font-size: 24px;
         text-align: left;
-        font-size: 34px;
     }
 
     .fontEdit p {
         text-align: left;
-        margin: 2vw 0 4vw 0;
-        font-size: 16px;
-        color: hsla(0, 0%, 100%, 0.75)
+        font-size: 14px;
+        line-height: 150%;
+        color: hsla(0, 0%, 100%, 0.75);
+    }
+
+    .statsEdit {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .statsEdit h2 {
+        font-size: 20px;
+    }
+
+    .statsEdit p {
+        font-size: 12px;
+    }
+
+}
+
+/* Desktop Settings */
+@media screen and (min-width: 1025px) {
+
+
+    .container {
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .colorCorrection {
+        width: 40vw;
+        height: 60vh;
+    }
+
+    .bgImg {
+        width: 40vw;
+        height: 60vh;
+        border-radius: 0 1vh 1vh 0;
+        background-size: cover;
+    }
+
+    .card {
+        display: flex;
+        width: 40vw;
+        height: 60vh;
+        border-radius: 1vh 0 0 1vh;
+        background-color: #1b1938;
+    }
+
+    .fontEdit {
+        margin: 5vw 5vw;
+    }
+
+    .fontEdit h1 {
+        font-size: 34px;
+        text-align: left;
+    }
+
+    .fontEdit p {
+        text-align: left;
+        font-size: 18px;
+        line-height: 150%;
+        color: hsla(0, 0%, 100%, 0.75);
     }
 
     .statsEdit {
@@ -151,8 +215,7 @@ body {
     }
 
     .statsEdit p {
-        margin-bottom: 0;
+        text-align: left;
         font-size: 12px;
     }
-
 }
